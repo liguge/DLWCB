@@ -5,9 +5,6 @@
 #This statement is mainly utlized to delimit one's own unbalanced dataset, which can be used to test the performance of one's own model or regularization method for unbalanced data.
 """
 Created on Fri Apr  9 15:05:08 2021
-
-
-
 @author: Administrator
 """
 import numpy as np
