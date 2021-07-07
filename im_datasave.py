@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
-data_im, y_im = make_imbalance(data, y, sampling_strategy={0: 10, 1: 20, 2: 30, 3: 40, 4: 50,
+#data_im, y_im = make_imbalance(data, y, sampling_strategy={0: 10, 1: 20, 2: 30, 3: 40, 4: 50,
                                                            5: 60, 6: 70, 7: 80, 8: 90, 9: 100}, random_state=2)
 #主要是这个语句来划定自己的不平衡数据集，这个可以用来测试自己模型或者正则化方法对于不平衡数据的性能。
 #This statement is mainly utlized to delimit one's own unbalanced dataset, which can be used to test the performance of one's own model or regularization method for unbalanced data.
 """
 Created on Fri Apr  9 15:05:08 2021
+
+
 
 @author: Administrator
 """
