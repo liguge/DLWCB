@@ -9,7 +9,6 @@
 LUO Hao，HE Chao，CHEN Biao，LU Yanping，ZHANG Xin，ZHANG Li. Small sample fault diagnosis based on Laplace wavelet convolution and BiGRU. JOURNAL OF VIBRATION AND SHOCK, 2022, 41(24): 41-50.
 ```
 
-代码将在论文发表后释放。
 
 ## Views
 ![](http://profile-counter.glitch.me/liguge/count.svg)
