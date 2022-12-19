@@ -4,6 +4,7 @@
 [【论文地址，知网】](https://doi.org/10.13465/j.cnki.jvs.2022.24.006)
 
 ## 摘要
+
     针对滚动轴承通常在复杂条件下工作易发生故障以及训练样本较少等问题。提出一种具有全局平均池化(Global average pooling, GAP)并融合双路Laplace小波卷积和双向门控循环单元(Daul Laplace Wavelet Convolution Bidirectional Gated Recurrent Unit, DLWCB)的故障诊断方法。首先Laplace小波卷积将原始信号从时域转换为频域，接着利用双路卷积和BiGRU挖掘少量样本的多尺度和时空特征；然后设计GAP降低模型的参数量并全面融合各GRU细胞提取的时空特征。其中从优化算法和目标函数入手，引入标签平滑、AdamP等提升DLWCB应对少量样本的能力，最后实现复杂工况下故障诊断。在两种轴承数据集、有限噪声样本下，50秒内便可完成训练，达到98%以上准确率，所提方法具有良好泛化性、鲁棒性和诊断效率。
     
 ## 模型
