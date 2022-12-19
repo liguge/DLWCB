@@ -1,19 +1,13 @@
 import torch
 import torch.nn as nn
 import numpy as np
-# import torch.optim as optim
-# #from tensorboard import program
-# from torch.optim.lr_scheduler import StepLR
 from torch.optim import lr_scheduler
 from wmodels1 import Laplace_fast as fast
 from gdatasave import train_loader, test_loader
 from early_stopping import EarlyStopping
 from label_smoothing import LSR
 from torch_optimizer import AdamP
-# from loss_428 import GHMCC
 import time
-from tanhsoftplus import TanhSoft
-# from torchsummary import summary
 def setup_seed(seed):
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
@@ -66,20 +60,7 @@ class Net(nn.Module):
 
                                  )  # PRelu
         self.p2_6 = nn.MaxPool1d(kernel_size=2)
-        # self.p3_1 = nn.Sequential(nn.GRU(124, 150, bidirectional=True))
         self.p3_1 = nn.Sequential(nn.GRU(124, 64, bidirectional=True))
-        # print(self.p3_1._all_weights)
-        # self.p3_1.weight_ih_l0 = nn.Parameter(nn.init.orthogonal(self.p3_1.weight_ih_l0))
-        # self.p3_1.weight_ih_l0_reverse = nn.Parameter(nn.init.orthogonal(self.p3_1.weight_ih_l0_reverse))
-        # self.p3_1.weight_hh_l0 = nn.Parameter(nn.init.orthogonal(self.p3_1.weight_hh_l0))
-        # self.p3_1.weight_hh_l0_reverse = nn.Parameter(nn.init.orthogonal(self.p3_1.weight_hh_l0_reverse))
-        # self.p3_1.bias_hh_l0 = nn.Parameter(torch.zeros_like(self.p3_1.bias_hh_l0))
-        # self.p3_1.bias_hh_l0_reverse = nn.Parameter(torch.zeros_like(self.p3_1.bias_hh_l0_reverse))
-        # self.p3_1.bias_ih_l0 = nn.Parameter(torch.zeros_like(self.p3_1.bias_ih_l0))
-        # self.p3_1.bias_ih_l0_reverse = nn.Parameter(torch.zeros_like(self.p3_1.bias_ih_l0_reverse))
-        # print(self.p3_1.bias_hh_l0)
-        # self.p3_2 = nn.Sequential(nn.Dropout(0.2),
-        #             nn.GRU(300, 30, bidirectional=True))  #
         self.p3_3 = nn.Sequential(nn.AdaptiveAvgPool1d(1))
         self.p4 = nn.Sequential(nn.Linear(30, 4))
 
@@ -89,7 +70,6 @@ class Net(nn.Module):
         encode = torch.mul(p1, p2)    #b,c,d
         p3_0 = encode.permute(1, 0, 2)  #c,b,d
         p3_1, _ = self.p3_1(p3_0)
-        # p3_2, _ = self.p3_2(p3_1)
         p3_11 = p3_1.permute(1, 0, 2)#[:,-1,:] # 取得最后的一次输出
         p3_12 = self.p3_3(p3_11).squeeze() #无论信号长度多少，都只输出(批次×最后一个卷积块的输出通道)的张量
         p4 = self.p4(p3_12) #用全连接层分成10分类
@@ -98,52 +78,12 @@ class Net(nn.Module):
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = Net().to(device)
 print("# parameters:", sum(param.numel() for param in model.parameters()))
-# model.load_state_dict(torch.load('./data7/model111.pt'))
-# for m in model.modules():
-#     if isinstance(m, nn.Conv1d):
-#         nn.init.kaiming_normal_(m.weight)
-#     elif isinstance(m, nn.LSTM):
-#         for param in m.parameters():
-#             if len(param.shape) >= 2:
-#                 nn.init.orthogonal_(param.data)
-#             else:
-#                 nn.init.normal_(param.data)
-#     elif isinstance(m, nn.Linear):
-#         nn.init.normal_(m.weight, mean=0, std=np.sqrt(1/30))
-# input = torch.rand(20, 1, 1024).to(device)
-# with SummaryWriter(log_dir='logs', comment='model') as w:
-#      w.add_graph(model, (input,))
-# tb = program.TensorBoard()
-# tb.configure(argv=[None, '--logdir', 'logs'])
-# url = tb.launch()
-# summary(model, input_size=(200, 200))  # 输出模型具有的参数
-# criterion = nn.CrossEntropyLoss()
-# criterion = GHMCC()
 criterion = LSR()
-#optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=0.0001)
-#optimizer = optim.Adam(model.parameters(), lr=0.0006, weight_decay=0.01)
-# optimizer = torch.optim.SGD(model.parameters(), lr=0.001, weight_decay=0.0001, momentum=0.99)
 bias_list = (param for name, param in model.named_parameters() if name[-4:] == 'bias')
 others_list = (param for name, param in model.named_parameters() if name[-4:] != 'bias')
 parameters = [{'parameters': bias_list, 'weight_decay': 0},
               {'parameters': others_list}]
-
 optimizer = AdamP(model.parameters(), lr=0.0004, weight_decay=0.0001)#0.0002
-# lr_scheduler =lr_scheduler.CosineAnnealingLR(optimizer, T_max=10)
-# from Apollo import Apollo
-# optimizer = Apollo(model.parameters(), lr=0.0002, weight_decay=0.0001)
-# scheduler = StepLR(optimizer, step_size=30, gamma=0.1)
-# from lookop import Lookahead
-# optimizer = torch.optim.RMSprop(model.parameters(), lr=0.0002, weight_decay=0.0001)
-# optimizer = Lookahead(optimizer=optimizer, k=5, alpha=0.5)
-# from Ranger2020 import Ranger
-# optimizer = Ranger21(model.parameters(), lr=0.001, weight_decay=0, betas=(0.9, 0.999),
-#                      use_warmup=True, normloss_factor=1e-4,
-#                      use_adaptive_gradient_clipping=True,
-#                      agc_clipping_value=.01, use_madgrad=False, use_warmdown=True, num_epochs=100,
-#                      using_gc=True, num_batches_per_epoch=len(train_loader))
-# optimizer = Ranger(model.parameters(), lr=0.001)
-#scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'max')
 losses = []
 acces = []
 eval_losses = []
