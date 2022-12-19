@@ -15,7 +15,7 @@ LUO Hao，HE Chao，CHEN Biao，LU Yanping，ZHANG Xin，ZHANG Li. Small sample 
 ```
 
 ```html
-@article{罗浩，何超，陈彪，路颜萍，张欣，张利1,
+@article{罗浩，何超，陈彪，路颜萍，张欣，张利},
 author = {罗浩，何超，陈彪，路颜萍，张欣，张利},
 title = {基于Laplace小波卷积和BiGRU的少量样本故障诊断方法},
 publisher = {振动与冲击},
