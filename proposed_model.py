@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import numpy as np
 from torch.optim import lr_scheduler
-from wmodels1 import Laplace_fast as fast
+from laplacewave import Laplace_fast as fast
 from gdatasave import train_loader, test_loader
 from early_stopping import EarlyStopping
 from timm.loss import LabelSmoothingCrossEntropy as LSR
