@@ -12,9 +12,7 @@ def Laplace(p):
     f = 80
     w = 2 * pi * f
     q = torch.tensor(1 - pow(ep, 2))
-    # y = A * torch.exp((-ep / (torch.sqrt(q))) * (w * (p - tal))) * (-torch.sin(w * (p - tal)))
-    y = A * torch.exp((-ep / (torch.sqrt(q))) * (w * (p - tal))) * (torch.sin(w * (p - tal)))  ##rgiht
-    #y = A * torch.exp((-ep / (torch.sqrt(q))) * (w * (p - tal))) * torch.exp(((0-1j) * w * (p - tal)))
+    y = A * torch.exp((-ep / (torch.sqrt(q))) * (w * (p - tal))) * (torch.sin(w * (p - tal)))
     return y
 
 class Laplace_fast(nn.Module):
