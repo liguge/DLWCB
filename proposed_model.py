@@ -5,7 +5,7 @@ from torch.optim import lr_scheduler
 from wmodels1 import Laplace_fast as fast
 from gdatasave import train_loader, test_loader
 from early_stopping import EarlyStopping
-from label_smoothing import LSR
+from timm.loss import LabelSmoothingCrossEntropy as LSR
 from torch_optimizer import AdamP
 import time
 def setup_seed(seed):
