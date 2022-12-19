@@ -35,7 +35,19 @@ doi = {10.13465/j.cnki.jvs.2022.24.006}
 } 
 ```
 ## 特别感谢
- - 1
- - 2
+ - https://github.com/HazeDT/WaveletKernelNet
+ - 
+```html
+@ARTICLE{9328876,
+  author={Li, Tianfu and Zhao, Zhibin and Sun, Chuang and Cheng, Li and Chen, Xuefeng and Yan, Ruqiang and Gao, Robert X.},
+  journal={IEEE Transactions on Systems, Man, and Cybernetics: Systems}, 
+  title={WaveletKernelNet: An Interpretable Deep Neural Network for Industrial Intelligent Diagnosis}, 
+  year={2022},
+  volume={52},
+  number={4},
+  pages={2302-2312},
+  doi={10.1109/TSMC.2020.3048950}}
+} 
+```
 ## Views
 ![](http://profile-counter.glitch.me/liguge/count.svg)
