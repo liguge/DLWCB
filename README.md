@@ -11,7 +11,14 @@
 
 ![微信截图_20221219175827](https://user-images.githubusercontent.com/19371493/208401271-1d998bdd-7e84-46d7-8b29-2436bab46188.png)
 
+## 代码
+代码做了一小处重大的修改：
+![image-20221231104811278](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20221231104811278.png)
+
 ## 引用
+
+去年录用的论文正式发表，开源了模型的代码，欢迎大家在自己的**硕/博论文**或者**期刊论文**中作为所提SOTA模型的baseline，与自己的模型相对比。如果有用请引用我们的论文：
+
 ```html
 罗浩，何超，陈彪，路颜萍，张欣，张利. 基于Laplace小波卷积和BiGRU的少量样本故障诊断方法[J]. 振动与冲击, 2022, 41(24): 41-50.
 LUO Hao，HE Chao，CHEN Biao，LU Yanping，ZHANG Xin，ZHANG Li. Small sample fault diagnosis based on Laplace wavelet convolution and BiGRU. JOURNAL OF VIBRATION AND SHOCK, 2022, 41(24): 41-50.
