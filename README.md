@@ -13,7 +13,7 @@
 
 ## 代码
 代码做了一小处重大的修改：
-![image-20221231104811278](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20221231104811278.png)
+![image](https://user-images.githubusercontent.com/19371493/210122827-26e316fd-6dff-46e0-8e05-373118bcb298.png)
 
 ## 引用
 
