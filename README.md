@@ -72,6 +72,15 @@ url = {https://www.sciencedirect.com/science/article/pii/S0263224121011507},
 author = {Xin Zhang and Chao He and Yanping Lu and Biao Chen and Le Zhu and Li Zhang}  
 } 
 ```
+# 环境
+
+pytorch == 1.10.0  
+python ==  3.8  
+cuda ==  10.2   
+
+# 联系
+- Chao He
+- 22110435#bjtu.edu.cn   (please replace # by @)
 
 ## Views
 ![](http://profile-counter.glitch.me/liguge/count.svg)
