@@ -27,20 +27,24 @@ LUO Hao，HE Chao，CHEN Biao，et al. Small sample fault diagnosis based on Lap
 ```
 
 ```html
-@article{罗浩，何超，陈彪，路颜萍，张欣，张利,
-author = {罗浩，何超，陈彪，路颜萍，张欣，张利},
-title = {基于Laplace小波卷积和BiGRU的少量样本故障诊断方法},
-publisher = {振动与冲击},
-year = {2022},
-journal = {振动与冲击},
-volume = {41},
-number = {24},
-eid = {41},
-numpages = {9},
-pages = {41},
-keywords = {拉普拉斯小波卷积核; 双向门控循环单元; 标签平滑；故障诊断；少量样本},
-url = {http://jvs.sjtu.edu.cn/CN/abstract/article_11911.shtml},
-doi = {10.13465/j.cnki.jvs.2022.24.006}
+@article{he2023physics,
+  title={Physics-informed interpretable wavelet weight initialization and balanced dynamic adaptive threshold for intelligent fault diagnosis of rolling bearings},
+  author={He, Chao and Shi, Hongmei and Si, Jin and Li, Jianbo},
+  journal={Journal of Manufacturing Systems},
+  volume={70},
+  pages={579--592},
+  year={2023},
+  publisher={Elsevier}
+}
+@article{he2024interpretable,
+  title={Interpretable physics-informed domain adaptation paradigm for cross-machine transfer diagnosis},
+  author={He, Chao and Shi, Hongmei and Liu, Xiaorong and Li, Jianbo},
+  journal={Knowledge-Based Systems},
+  volume={288},
+  pages={111499},
+  year={2024},
+  publisher={Elsevier}
+}
 } 
 ```
 ## 特别感谢
