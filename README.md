@@ -22,8 +22,8 @@
 如果有用请引用我们的论文：
 
 ```html
-罗浩，何超，陈彪等. 基于Laplace小波卷积和BiGRU的少量样本故障诊断方法[J]. 振动与冲击, 2022, 41(24): 41-50.
-LUO Hao，HE Chao，CHEN Biao，et al. Small sample fault diagnosis based on Laplace wavelet convolution and BiGRU. JOURNAL OF VIBRATION AND SHOCK, 2022, 41(24): 41-50.
+He, Chao, Hongmei Shi, Jin Si, and Jianbo Li. "Physics-informed interpretable wavelet weight initialization and balanced dynamic adaptive threshold for intelligent fault diagnosis of rolling bearings." Journal of Manufacturing Systems 70 (2023): 579-592.
+He, Chao, Hongmei Shi, Xiaorong Liu, and Jianbo Li. "Interpretable physics-informed domain adaptation paradigm for cross-machine transfer diagnosis." Knowledge-Based Systems 288 (2024): 111499.
 ```
 
 ```html
@@ -45,7 +45,6 @@ LUO Hao，HE Chao，CHEN Biao，et al. Small sample fault diagnosis based on Lap
   year={2024},
   publisher={Elsevier}
 }
-} 
 ```
 ## 特别感谢
  - https://github.com/HazeDT/WaveletKernelNet
