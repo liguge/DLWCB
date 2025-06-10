@@ -22,8 +22,8 @@
 如果有用请引用我们的论文：
 
 ```html
-He, Chao, Hongmei Shi, Jin Si, and Jianbo Li. "Physics-informed interpretable wavelet weight initialization and balanced dynamic adaptive threshold for intelligent fault diagnosis of rolling bearings." Journal of Manufacturing Systems 70 (2023): 579-592.
-He, Chao, Hongmei Shi, Xiaorong Liu, and Jianbo Li. "Interpretable physics-informed domain adaptation paradigm for cross-machine transfer diagnosis." Knowledge-Based Systems 288 (2024): 111499.
+[1] He, Chao, Hongmei Shi, Jin Si, and Jianbo Li. "Physics-informed interpretable wavelet weight initialization and balanced dynamic adaptive threshold for intelligent fault diagnosis of rolling bearings." Journal of Manufacturing Systems 70 (2023): 579-592.
+[2] He, Chao, Hongmei Shi, Xiaorong Liu, and Jianbo Li. "Interpretable physics-informed domain adaptation paradigm for cross-machine transfer diagnosis." Knowledge-Based Systems 288 (2024): 111499.
 ```
 
 ```html
