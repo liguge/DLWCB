@@ -87,3 +87,4 @@ cuda ==  10.2
 
 ## Views
 ![](http://profile-counter.glitch.me/liguge/count.svg)
+[![Hits](https://hits.sh/github.com/github.com/liguge/DLWCB.svg?label=Views&color=0891b2)](https://hits.sh/github.com/liguge/DLWCB/)
